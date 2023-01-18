@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Example from './example';
+import Editor from './editor';
 import Dashboard from './dashboard';
 
 const GlobalStyle = createGlobalStyle`
@@ -20,24 +20,15 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-class Demo extends Component {
+class EmailEditor extends Component {
   render() {
     return (
-      <Router>
-        <GlobalStyle />
-
-        <Switch>
-          <Route path={`/`} exact={true}>
-            <Example />
-          </Route>
-
-          <Route path={`/dashboard`}>
-            <Dashboard />
-          </Route>
-        </Switch>
-      </Router>
+      <React.Fragment>
+        <GlobalStyle/>
+        <Editor />
+      </React.Fragment>
     );
   }
 }
 
-ReactDOM.render(<Demo />, document.querySelector('#demo'));
+ReactDOM.render(<EmailEditor />, document.querySelector('#demo'));

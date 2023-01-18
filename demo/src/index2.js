@@ -4,7 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-import Example from './example';
+import Example from './editor';
 import Dashboard from './dashboard';
 
 const GlobalStyle = createGlobalStyle`
